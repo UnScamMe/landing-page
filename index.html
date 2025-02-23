@@ -15,11 +15,20 @@
             <img src="/assets/images/UnScamMe_logo.png" alt="UnScamMe Logo" class="h-12" />
             <span class="font-bold text-xl">UnScamMe</span>
         </div>
-        <nav class="space-x-4">
-            <a href="#" class="text-gray-700 hover:text-gray-900">Home</a>
-            <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
-            <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a>
-        </nav>
+        <div class="flex items-center">
+            <!-- Hamburger Button (Mobile) -->
+            <button class="md:hidden p-2 text-gray-700 hover:text-gray-900 focus:outline-none" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+            <path d="M4 5h16M4 12h16M4 19h16" />
+          </svg>
+        </button>
+            <!-- Nav Links -->
+            <nav id="mobileMenu" class="hidden md:flex space-x-4">
+                <a href="#" class="text-gray-700 hover:text-gray-900">Home</a>
+                <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
+                <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->

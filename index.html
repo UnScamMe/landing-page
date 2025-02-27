@@ -1,136 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <title>UnScamMe Coming Soon</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-</head>
+  </head>
 
-<body class="m-0 bg-gray-100 font-sans min-h-screen">
+  <body class="m-0 bg-gray-100 font-sans min-h-screen">
     <header class="bg-white flex items-center justify-between p-4 border-b border-gray-200">
-        <div class="flex items-center">
-            <img src="/assets/images/UnScamMe_logo.png" alt="UnScamMe Logo" class="h-12" />
-            <span class="font-bold text-xl">UnScamMe</span>
-        </div>
-        <div class="flex items-center">
-            <!-- Hamburger Button (Mobile) -->
-            <button class="md:hidden p-2 text-gray-700 hover:text-gray-900 focus:outline-none" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+      <div class="flex items-center">
+        <img src="/assets/images/UnScamMe_logo.png" alt="UnScamMe Logo" class="h-12" />
+        <span class="font-bold text-xl ml-2">UnScamMe</span>
+      </div>
+      <div class="flex items-center">
+        <!-- Hamburger Button (Mobile) -->
+        <button
+          class="md:hidden p-2 text-gray-700 hover:text-gray-900 focus:outline-none"
+          onclick="document.getElementById('mobileMenu').classList.toggle('hidden')"
+        >
           <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
             <path d="M4 5h16M4 12h16M4 19h16" />
           </svg>
         </button>
-            <!-- Nav Links -->
-            <nav id="mobileMenu" class="hidden md:flex space-x-4">
-                <a href="#" class="text-gray-700 hover:text-gray-900">Home</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a>
-            </nav>
-        </div>
+        <!-- Nav Links -->
+        <nav id="mobileMenu" class="hidden md:flex space-x-4">
+          <a href="#" class="text-gray-700 hover:text-gray-900">Home</a>
+          <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
+          <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a>
+        </nav>
+      </div>
     </header>
-
     <!-- Hero Section -->
     <section class="h-[500px] flex flex-col items-center justify-center bg-gray-900 text-white px-4">
-        <h1 class="text-5xl font-bold mb-4">Coming Soon</h1>
-        <p class="text-lg text-center">We’re building something amazing for you.</p>
+      <div class="w-full md:w-3/4 lg:w-1/2 mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">Making Online Transactions Scam-Free</h1>
+        <p class="text-lg text-center text-gray-400 mb-8">
+          Unscamme helps you buy confidently on social media, secure payments and refunds, and build trust in social commerce without the risk of fraud.
+          Sign up to be the first to know when we launch!
+        </p>
+
+        <!-- Email Form & CTA -->
+        <div class="max-w-md mx-auto">
+          <form class="flex flex-col md:flex-row gap-3">
+            <div class="flex-grow">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="w-full px-4 py-3 rounded-md border border-gray-700 focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder:text-gray-300"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-300 flex items-center justify-center"
+            >
+              Notify Me
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </form>
+          <p class="text-xs text-gray-500 mt-3 text-center">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+      </div>
     </section>
+
     <!-- Features Section -->
-    <section class="max-w-5xl min-h-[50vh] mx-auto py-12 px-4 grid grid-cols-1 md:grid-cols-3 gap-6 bg-white">
-        <div class="p-6 bg-gray-50 rounded-md shadow text-center">
-            <div class="flex justify-center mb-2">
-                <!-- Shield Check Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 fill-current" viewBox="0 0 20 20" fill="currentColor">
-            <path
-              fill-rule="evenodd"
-              d="M9.401 2.174a1 1 0 011.198 0l5.192 3.46c.29.194.46.52.46.868v5.01a8 8 0 01-3.281 6.523l-2.452 1.76a1 1 0 01-1.134 0l-2.452-1.76A8 8 0 014 11.512V6.502c0-.347.17-.674.46-.868l4.941-3.46zM13.47 9.53a.75.75 0 10-1.061-1.06l-2.184 2.183-.844-.844a.75.75 0 10-1.06 1.061l1.375 1.374a.75.75 0 001.06 0l2.714-2.714z"
-              clip-rule="evenodd"
-            />
-          </svg>
+    <section class="py-16 px-4 bg-gradient-to-b from-white to-gray-50">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">Why Choose UnScamMe</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl border-t-4 border-blue-500">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-50 mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
             </div>
-            <h3 class="font-bold mb-2">Secure Payments</h3>
-            <p class="text-gray-700">Only released when buyers are satisfied.</p>
-        </div>
-        <div class="p-6 bg-gray-50 rounded-md shadow text-center">
-            <div class="flex justify-center mb-2">
-                <!-- User Group Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 fill-current" viewBox="0 0 20 20" fill="currentColor">
-            <path
-              fill-rule="evenodd"
-              d="M17 13c0-1.886-1.977-3.4-4.582-3.778a5 5 0 10-4.836 0C4.976 9.6 3 11.114 3 13v2a1 1 0 001 1h12a1 1 0 001-1v-2z"
-              clip-rule="evenodd"
-            />
-          </svg>
+            <h3 class="text-xl font-bold text-center mb-3">You Control the Transaction</h3>
+            <p class="text-gray-600 text-center">Payments are only released when you're satisfied. You decide when the deal is complete.</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl border-t-4 border-green-500">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-50 mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                />
+              </svg>
             </div>
-            <h3 class="font-bold mb-2">Buyer-First Approach</h3>
-            <p class="text-gray-700">Full control in buyers' hands.</p>
-        </div>
-        <div class="p-6 bg-gray-50 rounded-md shadow text-center">
-            <div class="flex justify-center mb-2">
-                <!-- Star Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 fill-current" viewBox="0 0 20 20" fill="currentColor">
-            <path
-              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.26 3.885a1 1 0 00.95.69h4.084c.969 0 1.371 1.24.588 1.81l-3.307 2.399a1 1 0 00-.364 1.118l1.26 3.886c.3.921-.755 1.688-1.538 1.118L10 14.347l-3.284 2.387c-.783.57-1.838-.197-1.539-1.118l1.26-3.886a1 1 0 00-.364-1.118L3.767 9.312c-.783-.57-.38-1.81.588-1.81h4.085a1 1 0 00.949-.69l1.26-3.885z"
-            />
-          </svg>
+            <h3 class="text-xl font-bold text-center mb-3">Secure Transactions</h3>
+            <p class="text-gray-600 text-center">We ensure your money is safe until the deal is done. No more scams or fraudulent sellers.</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl border-t-4 border-purple-500"
+          >
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-purple-50 mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+                />
+              </svg>
             </div>
-            <h3 class="font-bold mb-2">Reputation-Based</h3>
-            <p class="text-gray-700">Credibility through successful transactions.</p>
+            <h3 class="text-xl font-bold text-center mb-3">Works Across All Platforms</h3>
+            <p class="text-gray-600 text-center">
+              Buy confidently from Instagram, Facebook, Twitter & WhatsApp. One solution for all your social commerce.
+            </p>
+          </div>
         </div>
-        <div class="p-6 bg-gray-50 rounded-md shadow text-center">
-            <div class="flex justify-center mb-2">
-                <!-- Chip Icon (AI) -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 fill-current" viewBox="0 0 20 20" fill="currentColor">
-            <path
-              fill-rule="evenodd"
-              d="M5 11V9H4a2 2 0 01-2-2V5c0-1.105.895-2 2-2h2a2 2 0 012 2v1h2V5a2 2 0 012-2h2c1.105 0 2 .895 2 2v2a2 2 0 01-2 2h-1v2h1a2 2 0 012 2v2c0 1.105-.895 2-2 2h-2a2 2 0 01-2-2v-1h-2v1a2 2 0 01-2 2H4c-1.105 0-2-.895-2-2v-2a2 2 0 012-2h1zm3-2v2h4V9H8z"
-              clip-rule="evenodd"
-            />
-          </svg>
+
+        <div class="flex justify-center mt-12">
+          <a href="#" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-300 flex items-center">
+            Coming Soon
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Waitlist CTA Section -->
+    <section class="py-16 px-4 bg-gray-50">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Ready for Scam-Free Transactions?</h2>
+        <p class="text-xl text-gray-600 mb-8">Be the first to experience scam-free transactions. Enter your email to join the waitlist!</p>
+
+        <div class="max-w-lg mx-auto">
+          <form class="flex flex-col sm:flex-row gap-3">
+            <div class="flex-grow">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 text-gray-800"
+                required
+              />
             </div>
-            <h3 class="font-bold mb-2">AI Risk Detection</h3>
-            <p class="text-gray-700">Flags potential risks before purchase.</p>
+            <button
+              type="submit"
+              class="px-6 py-3 bg-blue-600 w-1/2 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-300 flex items-center justify-center"
+            >
+              Join Waitlist
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </form>
+          <p class="text-xs text-gray-500 mt-3">We respect your privacy. Unsubscribe at any time.</p>
         </div>
-        <div class="p-6 bg-gray-50 rounded-md shadow text-center">
-            <div class="flex justify-center mb-2">
-                <!-- Check Circle Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 fill-current" viewBox="0 0 20 20" fill="currentColor">
-            <path
-              fill-rule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-              clip-rule="evenodd"
-            />
-          </svg>
-            </div>
-            <h3 class="font-bold mb-2">Smart Verification</h3>
-            <p class="text-gray-700">Payments held until order completion.</p>
-        </div>
-        <div class="p-6 bg-gray-50 rounded-md shadow text-center">
-            <div class="flex justify-center mb-2">
-                <!-- Link Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 fill-current" viewBox="0 0 20 20" fill="currentColor">
-            <path
-              fill-rule="evenodd"
-              d="M12.293 7.293a1 1 0 011.414 0l1.586 1.586a3 3 0 010 4.242l-2.121 2.121a3 3 0 01-4.242 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 001.414 0l2.121-2.12a1 1 0 000-1.415L13 8.707a1 1 0 010-1.414z"
-              clip-rule="evenodd"
-            />
-            <path
-              fill-rule="evenodd"
-              d="M7.707 12.707a1 1 0 01-1.414 0L4.707 11.12a3 3 0 010-4.242l2.121-2.12a3 3 0 014.242 0l.708.707a1 1 0 11-1.415 1.414l-.707-.707a1 1 0 00-1.414 0L6.121 7.88a1 1 0 000 1.414l1.586 1.586a1 1 0 010 1.414z"
-              clip-rule="evenodd"
-            />
-          </svg>
-            </div>
-            <h3 class="font-bold mb-2">Seamless Links</h3>
-            <p class="text-gray-700">Generate secure links from any product post.</p>
-        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="p-4 h-auto bg-gray-900 text-white text-center">
-        <p class="text-sm">© 2025 UnScamMe. All Rights Reserved.</p>
+      <p class="text-sm">© 2025 UnScamMe. All Rights Reserved.</p>
     </footer>
-</body>
-
+  </body>
 </html>

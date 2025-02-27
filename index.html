@@ -35,6 +35,17 @@
     <!-- Hero Section -->
     <section class="min-h-100vh md:min-h-[500px] flex flex-col items-center justify-center bg-gray-900 text-white p-4">
       <div class="w-full md:w-3/4 lg:w-1/2 mx-auto h-full pt-10">
+        <!-- Coming Soon Animation -->
+        <div class="flex justify-center mb-8">
+          <div class="inline-flex items-center px-4 py-2 rounded-full bg-blue-600/20 text-blue-500">
+            <span class="relative flex h-3 w-3 mr-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+            </span>
+            <span class="font-semibold">Coming Soon</span>
+          </div>
+        </div>
+
         <h1 class="text-3xl md:text-5xl font-bold mb-4 text-center">Making Online Transactions Scam-Free</h1>
         <p class="md:text-lg text-center text-gray-400 mb-8">
           Unscamme helps you buy confidently on social media, secure payments and refunds, and build trust in social commerce without the risk of fraud.
@@ -131,9 +142,20 @@
         </div>
 
         <div class="flex justify-center mt-12">
-          <a href="#" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-300 flex items-center">
-            Coming Soon
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+          <a href="#" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-300 flex items-center group">
+            <span class="flex items-center">
+              <span class="relative inline-flex h-3 w-3 mr-3">
+                <span class="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+              </span>
+              Coming Soon
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
               <path
                 fill-rule="evenodd"
                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"

@@ -165,7 +165,7 @@ function initWorldMap() {
   path.setAttribute("d", worldPath)
   path.setAttribute("fill", "#3b82f6")
   path.setAttribute("stroke", "#2563eb")
-  path.setAttribute("stroke-width", "1")
+  path.setAttribute("stroke-width", "2")
   svg.appendChild(path)
 
   // Add connection points (major cities/hubs)
@@ -292,7 +292,7 @@ function initWorldMap() {
         line.setAttribute("stroke", "#3b82f6")
         line.setAttribute("stroke-width", "1")
         line.setAttribute("stroke-dasharray", "5,5")
-        line.setAttribute("opacity", "0.3")
+        line.setAttribute("opacity", "0.7")
 
         // Create data flow animation
         const animateDash = document.createElementNS("http://www.w3.org/2000/svg", "animate")

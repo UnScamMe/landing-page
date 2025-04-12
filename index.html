@@ -411,7 +411,7 @@
       /* Modern mobile menu */
 
       .mobile-menu {
-        transform: translateY(-100%);
+        transform: translateY(-150%);
         transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
@@ -518,7 +518,7 @@
             <button
               class="px-4 py-2 lg:px-5 lg:py-2 rounded-full bg-primary-600 text-white hover:bg-primary-700 shadow-md transition-all transform hover:scale-105 flex items-center text-sm lg:text-base"
             >
-              Join Waitlist
+              Get Early Access
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
                 <path
                   fill-rule="evenodd"
@@ -557,7 +557,7 @@
 
           <div class="mt-8 flex flex-col space-y-4">
             <button id="btn-waitlist" class="w-full py-3 rounded-lg bg-primary-600 text-white font-medium hover:bg-primary-700 transition-colors">
-              Join Waitlist
+              Get Early Access
             </button>
           </div>
         </div>
@@ -565,8 +565,8 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden bg-green-white-gradient">
-      <div class="absolute inset-0"></div>
+    <section class="pt-32 pb-20 md:pt-40 md:pb-32 xl:min-h-screen relative overflow-hidden bg-green-white-gradient">
+      <!-- <div class="absolute inset-0"></div> -->
 
       <!-- World Map Background -->
       <div class="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
@@ -575,34 +575,62 @@
         </div>
       </div>
 
-      <!-- Floating Country Flags -->
-      <div class="absolute inset-0 pointer-events-none">
+      <!-- Flags Layer (Above Map) -->
+      <div class="absolute w-full h-full top-0 sm:z-20 pointer-events-none">
         <!-- UK Flag -->
         <div
-          class="absolute top-[5rem] right-[10%] sm:top-1/4 sm:right-[15%] w-16 h-16 md:w-20 md:h-20 rounded-xl bg-white shadow-lg flex items-center justify-center transform rotate-12 floating"
+          id="uk-flag"
+          class="flag-container absolute top-[9rem] right-[10%] sm:top-1/4 2xl:right-[15%] w-16 h-16 md:w-20 md:h-20 rounded-xl bg-white shadow-lg flex items-center justify-center transform rotate-12 floating cursor-pointer pointer-events-auto"
         >
-          <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag" class="w-12 h-8 md:w-16 md:h-10 rounded-sm object-cover" />
+          <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag" class="w-12 h-8 md:w-16 md:h-10 rounded-sm object-cover cursor-pointer" />
+          <div
+            id="uk-tooltip"
+            class="hidden absolute -bottom-20 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs rounded-lg py-2 px-3 w-48 text-center z-50"
+          >
+            Connecting Nigeria with the UK Diaspora
+          </div>
         </div>
 
-        <!-- US Flag -->
+        <!-- Nigeria Flag -->
         <div
-          class="absolute top-1/3 left-[15%] w-16 h-16 md:w-20 md:h-20 rounded-xl bg-white shadow-lg flex items-center justify-center transform -rotate-6 floating"
+          id="ng-flag"
+          class="flag-container absolute bottom-1/2 sm:top-1/3 left-[10%] 2xl:left-[15%] w-16 h-16 md:w-20 md:h-20 rounded-xl bg-white shadow-lg flex items-center justify-center transform -rotate-6 floating cursor-pointer pointer-events-auto"
         >
-          <img src="https://flagcdn.com/w80/ng.png" alt="US Flag" class="w-12 h-8 md:w-16 md:h-10 rounded-sm object-cover" />
+          <img src="https://flagcdn.com/w80/ng.png" alt="Nigeria Flag" class="w-12 h-8 md:w-16 md:h-10 rounded-sm object-cover cursor-pointer" />
+          <div
+            id="ng-tooltip"
+            class="hidden absolute -bottom-20 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs rounded-lg py-2 px-3 w-48 text-center z-50"
+          >
+            Connecting Nigeria with the Global Diaspora
+          </div>
         </div>
 
         <!-- Canada Flag -->
         <div
-          class="absolute bottom-1/3 left-[20%] w-16 h-16 md:w-20 md:h-20 rounded-xl bg-white shadow-lg flex items-center justify-center transform rotate-6 floating"
+          id="ca-flag"
+          class="flag-container absolute bottom-1/3 left-[20%] w-16 h-16 md:w-20 md:h-20 rounded-xl bg-white shadow-lg flex items-center justify-center transform rotate-6 floating cursor-pointer pointer-events-auto"
         >
-          <img src="https://flagcdn.com/w80/ca.png" alt="Canada Flag" class="w-12 h-8 md:w-16 md:h-10 rounded-sm object-cover" />
+          <img src="https://flagcdn.com/w80/ca.png" alt="Canada Flag" class="w-12 h-8 md:w-16 md:h-10 rounded-sm object-cover cursor-pointer" />
+          <div
+            id="ca-tooltip"
+            class="hidden absolute -bottom-20 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs rounded-lg py-2 px-3 w-48 text-center z-50"
+          >
+            Connecting Nigeria with the Canadian Diaspora
+          </div>
         </div>
 
-        <!-- Nigerian Flag -->
+        <!-- US Flag -->
         <div
-          class="absolute bottom-1/3 right-[20%] w-16 h-16 md:w-20 md:h-20 rounded-xl bg-white shadow-lg flex items-center justify-center transform rotate-6 floating"
+          id="us-flag"
+          class="flag-container absolute bottom-1/3 right-[20%] w-16 h-16 md:w-20 md:h-20 rounded-xl bg-white shadow-lg flex items-center justify-center transform rotate-6 floating cursor-pointer pointer-events-auto"
         >
-          <img src="https://flagcdn.com/w80/us.png" alt="Canada Flag" class="w-12 h-8 md:w-16 md:h-10 rounded-sm object-cover" />
+          <img src="https://flagcdn.com/w80/us.png" alt="US Flag" class="w-12 h-8 md:w-16 md:h-10 rounded-sm object-cover cursor-pointer" />
+          <div
+            id="us-tooltip"
+            class="hidden absolute -bottom-20 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs rounded-lg py-2 px-3 w-48 text-center z-50"
+          >
+            Connecting Nigeria with the US Diaspora
+          </div>
         </div>
       </div>
 
@@ -618,11 +646,12 @@
               <div class="h-3 w-3 rounded-full bg-blue-500 pulse-dot"></div>
               <div class="absolute inset-0 rounded-full bg-blue-400 animate-ping opacity-75"></div>
             </div>
-            Coming Soon
+            <span class="text-lg">Coming Soon</span>
           </div>
 
           <h1 data-aos="fade-up" data-aos-duration="1000" class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
-            The Future of <span class="gradient-text">Secure</span> Social Commerce
+            <span class="gradient-text">Secure</span> Social Commerce for the <span class="gradient-text">Nigerian Diaspora</span>
+            <!-- Secure Social Commerce  -->
           </h1>
 
           <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
@@ -659,7 +688,7 @@
               type="submit"
               class="px-6 py-3 min-w-[200px] btn-gradient text-white font-medium rounded-lg transition duration-300 flex items-center justify-center animated-btn"
             >
-              Join Waitlist
+              Get Early Access
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                 <path
                   fill-rule="evenodd"
@@ -828,7 +857,7 @@
     <section id="how-it-works" class="py-24 bg-dots relative overflow-hidden">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How UnScamMe Works</h2>
+          <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How Unscamme Works</h2>
           <p data-aos="fade-up" data-aos-delay="200" class="text-lg text-gray-600">
             Experience the future of secure social commerce in a few simple steps.
           </p>
@@ -1051,7 +1080,7 @@
               type="submit"
               class="px-6 py-3 min-w-[200px] bg-white text-primary-700 font-medium rounded-lg transition duration-300 flex items-center justify-center hover:bg-blue-50 transform hover:scale-105"
             >
-              Join Waitlist
+              Get Early Access
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                 <path
                   fill-rule="evenodd"
@@ -1071,7 +1100,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white py-12 border-t border-gray-100">
+    <footer class="bg-white w-11/12 mx-auto py-12 border-t border-gray-100">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <!-- Company Info -->

@@ -101,6 +101,8 @@ document.addEventListener("DOMContentLoaded", function () {
   initCounters()
 
   JoinWaitlist()
+
+  diasporaTooltip()
 })
 
 // Initialize counters
@@ -344,5 +346,37 @@ function JoinWaitlist() {
     setTimeout(function () {
       emailInput.focus()
     }, 600) // Adjust the delay as needed based on your scroll duration
+  })
+}
+
+function diasporaTooltip() {
+  const flags = document.querySelectorAll(".flag-container")
+
+  flags.forEach((flag) => {
+    const tooltip = flag.querySelector('div[id$="-tooltip"]')
+
+    flag.addEventListener("mouseenter", function () {
+      tooltip.classList.remove("hidden")
+    })
+
+    flag.addEventListener("mouseleave", function () {
+      tooltip.classList.add("hidden")
+    })
+
+    // For mobile
+    flag.addEventListener("click", function (e) {
+      e.preventDefault()
+      const isHidden = tooltip.classList.contains("hidden")
+
+      // Hide all tooltips
+      document.querySelectorAll('div[id$="-tooltip"]').forEach((tip) => {
+        tip.classList.add("hidden")
+      })
+
+      // Show this tooltip if it was hidden
+      if (isHidden) {
+        tooltip.classList.remove("hidden")
+      }
+    })
   })
 }

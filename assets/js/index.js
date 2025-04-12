@@ -99,6 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize counters
   initCounters()
+
+  JoinWaitlist()
 })
 
 // Initialize counters
@@ -319,5 +321,28 @@ function initWorldMap() {
       this.setAttribute("fill", "#3b82f6") // Revert color
       this.setAttribute("r", "5") // Revert size
     })
+  })
+}
+
+function JoinWaitlist() {
+  // Get the button, the form and the email input
+  const waitlistButton = document.getElementById("btn-waitlist")
+  const waitlistForm = document.getElementById("waitlist")
+  const emailInput = waitlistForm.querySelector('input[type="email"]')
+
+  // Add click event listener to the button
+  waitlistButton.addEventListener("click", function (e) {
+    e.preventDefault()
+
+    // Scroll to the form
+    waitlistForm.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    })
+
+    // Set a slight delay to focus the input after scrolling completes
+    setTimeout(function () {
+      emailInput.focus()
+    }, 600) // Adjust the delay as needed based on your scroll duration
   })
 }

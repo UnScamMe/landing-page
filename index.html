@@ -355,8 +355,8 @@
     <div class="progress-bar" id="progressBar"></div>
 
     <!-- Header -->
-    <header class="fixed w-11/12 sm:w-full mt-2 mx-auto top-0 left-0 right-0 z-50 transition-all duration-300" id="header">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="fixed w-11/12 sm:w-full mt-2 mx-auto top-0 left-0 right-0 z-50 transition-all duration-300">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8" id="header">
         <div class="flex items-center justify-between h-16 md:h-20">
           <!-- Logo -->
           <div class="flex items-center">
@@ -470,7 +470,7 @@
       </div>
 
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="max-w-4xl mx-auto text-center bg-white/85">
+        <div class="max-w-4xl mx-auto text-center bg-white/85 sm:bg-transparent">
           <!-- Status Badge -->
           <div
             data-aos="fade-down"
@@ -538,7 +538,7 @@
           </p>
 
           <!-- User Avatars -->
-          <div data-aos="fade-up" data-aos-delay="600" class="flex justify-center mt-8">
+          <div data-aos="fade-up" data-aos-delay="600" class="flex justify-center items-center mt-8">
             <div class="flex -space-x-3">
               <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/66.jpg" alt="User avatar" />
               <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/44.jpg" alt="User avatar" />
@@ -692,7 +692,7 @@
             >
               <div class="w-14 h-14 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold mb-6 mx-auto shadow-lg">2</div>
               <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Secure</h3>
-              <p class="text-gray-600 text-center">Your payment is held securely in escrow until you receive and approve your purchase.</p>
+              <p class="text-gray-600 text-center">Your payment is held securely in trustlock until you receive and approve your purchase.</p>
             </div>
 
             <!-- Step 3 -->
@@ -912,11 +912,13 @@
             </p>
 
             <!-- Social Media Links -->
-            <div class="flex space-x-4">
+            <div class="flex space-x-2">
               <a
+                target="_blank"
                 href="https://web.facebook.com/profile.php?id=61573205834576"
                 class="text-gray-400 hover:text-primary-600 transition-colors p-2 rounded-full hover:bg-primary-50"
               >
+                <!-- Facebook Icon -->
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     fill-rule="evenodd"
@@ -925,10 +927,13 @@
                   ></path>
                 </svg>
               </a>
+
               <a
+                target="_blank"
                 href="https://www.instagram.com/unscamme_official"
                 class="text-gray-400 hover:text-primary-600 transition-colors p-2 rounded-full hover:bg-primary-50"
               >
+                <!-- Instagram Icon -->
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     fill-rule="evenodd"
@@ -937,14 +942,30 @@
                   ></path>
                 </svg>
               </a>
+
               <a
+                target="_blank"
                 href="https://www.linkedin.com/company/un-scam-me/"
                 class="text-gray-400 hover:text-primary-600 transition-colors p-2 rounded-full hover:bg-primary-50"
               >
+                <!-- LinkedIn Icon -->
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"
                   ></path>
+                </svg>
+              </a>
+
+              <a
+                target="_blank"
+                href="https://x.com/unscamme"
+                class="text-gray-400 hover:text-primary-600 transition-colors p-2 rounded-full hover:bg-primary-50"
+              >
+                <!-- Twitter/X Icon -->
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M18.244 3h3.356l-7.31 8.354L23 21h-7.525l-5.112-6.15L4.62 21H1.263l7.786-8.892L1 3h7.643l4.668 5.625L18.244 3zm-1.155 16.875h1.859L7.132 4.07H5.16l11.93 15.805z"
+                  />
                 </svg>
               </a>
             </div>
